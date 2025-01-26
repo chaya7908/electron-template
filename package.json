@@ -1,0 +1,30 @@
+{
+  "name": "CS-Game",
+  "productName": "CS-Game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "build": {
+    "appId": "com.example.mymacapp",
+    "mac": {
+      "icon": "icon.png",
+      "target": "dmg"
+    },
+    "win": {
+      "icon": "icon.png",
+      "target": "nsis"
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^34.0.1",
+    "electron-builder": "^25.1.8",
+    "electron-packager": "^17.1.2"
+  }
+}
