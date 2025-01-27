@@ -6,17 +6,36 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "build:mac": "electron-builder --mac --config.directories.output=mac_build_output",
+    "build:win": "electron-builder --win --config.directories.output=win_build_output && node scripts/win-cleanup-and-zip.js",
+    "build": "npm run build:mac && npm run build:win"
   },
   "build": {
     "appId": "com.example.mymacapp",
+    "asar": true,
     "mac": {
       "icon": "icon.png",
-      "target": "dmg"
+      "target": "dmg",
+      "hardenedRuntime": true,
+      "gatekeeperAssess": false,
+      "notarize": false
     },
     "win": {
       "icon": "icon.png",
-      "target": "nsis"
+      "target": [
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true
     }
   },
   "keywords": [],
