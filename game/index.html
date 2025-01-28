@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="he">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="assets/cs.ico">
+
+  <meta property="og:title" content="sdsdsdsds" />
+  <meta property="og:type" content="website" />
+
+  <title>game</title>
+  <link rel="stylesheet" href="styles/animations.css">
+  <link rel="stylesheet" href="styles/layout.css">
+  <link rel="stylesheet" href="styles/shared.css">
+  <link rel="stylesheet" href="constants.css">
+</head>
+
+<body dir="rtl">
+  <div class="header">
+    <div class="logo-container">
+      <div class="logo">
+        <img src="assets/logo.png" alt="logo" />
+      </div>
+      <div class="logo">
+        <img src="assets/logo.png" alt="logo" />
+      </div>
+    </div>
+
+    <div class="timer-container">
+      <div class="timer">
+        <span id="minutes" class="digit">--</span> <span class="digit">:</span><span id="seconds" class="digit">--</span>
+      </div>
+    </div>
+  </div>
+
+  <div id="game-container" class="container">
+    <!-- תוכן המשחק יישאר כאן -->
+  </div>
+
+  <div id="expired-message" class="modal-overlay">
+    <div class="modal-content">
+      <div class="expired-message">
+        <p>לא ניתן לטעון את המשחק</p>
+        <p>לשימוש חוזר, צרו קשר: <a href="mailto:chaya7908.auto@gmail.com">chaya7908.auto@gmail.com</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <div class="created-by">
+      <img class="cs-img" src="assets/cs.png"/>
+      <span>created by: <a href="mailto:chaya7908.auto@gmail.com">Chaya</a></span>
+    </div>
+  </div>
+
+  <script src="constants.js"></script>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/script.js"></script>
+</body>
+
+</html>

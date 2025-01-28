@@ -1,0 +1,63 @@
+.hidden {
+  display: none !important;
+}
+
+.transparent {
+  opacity: 0 !important;
+  transition: all 2s ease;
+}
+
+
+/* modal */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.modal-content {
+  background-color: var(--color-gray);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 99;
+}
+.modal-overlay.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* timer */
+.timer-container {
+  direction: ltr;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  color: white;
+  margin-right: auto;
+  padding: 5px;
+}
+.timer-container .timer {
+  display: flex;
+  gap: 5px;
+}
+.digit {
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+.digit.new {
+  animation: slideUp 0.3s ease-in-out forwards;
+}
+.digit.old {
+  animation: slideDown 0.3s ease-in-out forwards;
+}
